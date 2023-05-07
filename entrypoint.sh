@@ -5,7 +5,7 @@ if [ -f /www/.env ]; then
     cp -f /www/.env /tmp/www
 fi
 rm -rf /www/{*,.[^.]*}
-mv /tmp/www/{*,.[^.]*} /www
+cp -rf /tmp/www/{*,.[^.]*} /www
 
 echo "生成Caddy配置文件..."
 if echo ${HOME_URL} | grep -Eq "^https"; then

@@ -5,6 +5,7 @@ services:
     container_name: v2board
     volumes:
       - v2board_data:/www
+      - caddy_data:/root/.caddy
     environment:
       - HOME_URL=http://localhost
       # for ssl
