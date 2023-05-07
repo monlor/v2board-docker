@@ -12,14 +12,15 @@ RUN curl -LO https://github.com/v2board/v2board/archive/refs/tags/${V2BOARD_VERS
     composer install -vvv && \
     rm -rf ~/.composer/cache ${V2BOARD_VERSION}.tar.gz
 
-RUN touch /wwwlogs/queue.log /wwwlogs/horizon.log
-
 COPY entrypoint.sh /entrypoint.sh
 
 COPY crontabs.conf /etc/crontabs/root
 
 COPY supervisord.conf /run/supervisor/supervisord.conf
 
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /entrypoint.sh && \
+    touch /wwwlogs/queue.log /wwwlogs/horizon.log
 
 ENTRYPOINT ["/entrypoint.sh"]
+
+CMD []

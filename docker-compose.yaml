@@ -5,11 +5,6 @@ services:
     container_name: v2board
     ports:
       - '80:80'
-      - '443:443'
-    environment:
-      HOME_URL: http://localhost
-      # for ssl
-      # CADDY_EMAIL: admin@example.com
     restart: unless-stopped
     links:
      - mysql

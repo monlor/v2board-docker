@@ -1,21 +1,8 @@
 #!/bin/sh
 
 echo "生成Caddy配置文件..."
-if echo ${HOME_URL} | grep -Eq "^https"; then
-        cat > /run/caddy/caddy.conf <<-EOF
-${HOME_URL} {
-    root /www/public
-    log /wwwlogs/caddy.log
-    tls ${CADDY_EMAIL:-admin@example.com}
-    fastcgi / /tmp/php-cgi.sock php
-    rewrite {
-        to {path} {path}/ /index.php?{query}
-    }
-}
-EOF
-else
-    cat > /run/caddy/caddy.conf <<-EOF
-${HOME_URL:-http://localhost} {
+cat > /run/caddy/caddy.conf <<-EOF
+http://localhost {
     root /www/public
     log /wwwlogs/caddy.log
     fastcgi / /tmp/php-cgi.sock php
@@ -24,7 +11,6 @@ ${HOME_URL:-http://localhost} {
     }
 }
 EOF
-fi
 
 cat <<-EOF
 ============================================
