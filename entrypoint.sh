@@ -33,8 +33,10 @@ cat <<-EOF
 2. 初始化数据库：php artisan v2board:install
 3. 启动服务：php artisan horizon &
 4. 退出容器：exit
-后续更新v2board命令：
-cd /www && sh update.sh
+
+后续更新v2board：
+1. 备份docker卷数据
+2. 执行更新命令：cd /www && sh update.sh
 ============================================
 EOF
 
