@@ -2,7 +2,7 @@
 
 echo "生成Caddy配置文件..."
 cat > /run/caddy/caddy.conf <<-EOF
-http://localhost {
+0.0.0.0:80 {
     root /www/public
     log /wwwlogs/caddy.log
     fastcgi / /tmp/php-cgi.sock php
