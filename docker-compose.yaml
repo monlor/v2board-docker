@@ -3,6 +3,8 @@ services:
   v2board:
     image: monlor/v2board
     container_name: v2board
+    volumes:
+      - v2board_data:/www
     ports:
       - '80:80'
     restart: unless-stopped
@@ -12,6 +14,12 @@ services:
     image: mysql:5.7.29
     container_name: mysql
     restart: unless-stopped
+    volumes:
+      - mysql_data:/var/lib/mysql
     environment: 
       MYSQL_ROOT_PASSWORD: v2boardisbest
       MYSQL_DATABASE: v2board
+  
+volumes:
+  mysql_data:
+  v2board_data:

@@ -1,4 +1,11 @@
-#!/bin/sh
+#!/bin/bash
+
+echo "更新v2board文件..."
+if [ -f /www/.env ]; then
+    cp -f /www/.env /tmp/www
+fi
+rm -rf /www/{*,.[^.]*}
+mv /tmp/www/{*,.[^.]*} /www
 
 echo "生成Caddy配置文件..."
 cat > /run/caddy/caddy.conf <<-EOF
