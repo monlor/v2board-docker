@@ -8,8 +8,7 @@ RUN curl -#Lo /usr/local/bin/composer https://getcomposer.org/download/${COMPOSE
 ENV V2BOARD_VERSION="1.7.3"
 
 RUN curl -#Lo /tmp/${V2BOARD_VERSION}.tar.gz https://github.com/v2board/v2board/archive/refs/tags/${V2BOARD_VERSION}.tar.gz && \
-    mkdir -p /tmp/www && cd /tmp/www && \
-    tar zxvf /tmp/${V2BOARD_VERSION}.tar.gz --strip 1 -C /tmp/www && \
+    tar zxvf /tmp/${V2BOARD_VERSION}.tar.gz --strip 1 -C /www && \
     composer install -vvv && \
     rm -rf ~/.composer/cache /tmp/${V2BOARD_VERSION}.tar.gz
 

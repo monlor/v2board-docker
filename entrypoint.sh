@@ -1,12 +1,5 @@
 #!/bin/bash
 
-echo "更新v2board文件..."
-if [ -f /www/.env ]; then
-    cp -f /www/.env /tmp/www
-fi
-rm -rf /www/{*,.[^.]*}
-cp -rf /tmp/www/{*,.[^.]*} /www
-
 echo "生成Caddy配置文件..."
 if echo ${HOME_URL} | grep -Eq "^https"; then
         cat > /run/caddy/caddy.conf <<-EOF
@@ -40,6 +33,8 @@ cat <<-EOF
 2. 初始化数据库：php artisan v2board:install
 3. 启动服务：php artisan horizon &
 4. 退出容器：exit
+后续更新v2board命令：
+cd /www && sh update.sh
 ============================================
 EOF
 
