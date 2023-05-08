@@ -7,10 +7,15 @@ ${HOME_URL} {
     root /www/public
     log /wwwlogs/caddy.log
     tls ${CADDY_EMAIL:-admin@example.com}
+    gzip
     fastcgi / /tmp/php-cgi.sock php
     rewrite {
         to {path} {path}/ /index.php?{query}
     }
+}
+
+${HOME_URL/https/http} {
+    redir https://{host}{uri}
 }
 EOF
 else
