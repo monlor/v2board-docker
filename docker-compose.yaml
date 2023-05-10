@@ -1,13 +1,14 @@
 version: '3'
 services:
   v2board:
-    image: monlor/v2board
+    image: monlor/v2board:main
     container_name: v2board
     volumes:
       - v2board_data:/www
-      - caddy_data:/root/.caddy
+      # for ssl
+      # - caddy_data:/root/.caddy
     environment:
-      - HOME_URL=http://localhost
+      - HOME_URL=0.0.0.0:80
       # for ssl
       # - CADDY_EMAIL=admin@example.com
     ports:

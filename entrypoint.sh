@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# 未初始化的情况下，每次启动都会更新v2board
+# 初始化后，后续更新使用命令`docker exec -it v2board /bin/bash update.sh`
+if [ ! -f /www/.env ]; then
+    echo "更新v2board文件..."
+    rm -rf /www/{*,.[^.]*}
+    cp -rf /tmp/www/{*,.[^.]*} /www
+fi
+
 echo "生成Caddy配置文件..."
 if echo ${HOME_URL} | grep -Eq "^https"; then
         cat > /run/caddy/caddy.conf <<-EOF
@@ -41,7 +49,7 @@ cat <<-EOF
 
 后续更新v2board：
 1. 备份docker卷数据
-2. 执行更新命令：cd /www && sh update.sh
+2. 执行更新命令：docker exec -it v2board /bin/bash update.sh
 ============================================
 EOF
 
