@@ -8,7 +8,7 @@ services:
       # for ssl
       # - caddy_data:/root/.caddy
     environment:
-      - HOME_URL=0.0.0.0:80
+      - HOME_URL=http://0.0.0.0:80
       # for ssl
       # - CADDY_EMAIL=admin@example.com
     ports:

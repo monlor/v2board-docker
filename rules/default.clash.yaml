@@ -1,38 +1,24 @@
-# port: 7890
-# socks-port: 7891
-# redir-port: 7892
-# tproxy-port: 7893
 mixed-port: 7890
 allow-lan: true
-bind-address: "*"
-mode: rule
+mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
 
-dns:
-  enable: true
-  # listen: 0.0.0.0:53
-  ipv6: false
+# Clash for Windows
+cfw-latency-timeout: 3000
+cfw-latency-url: http://cp.cloudflare.com/generate_204
+cfw-conn-break-strategy: true
 
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  enhanced-mode: redir-host
-  fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  fallback:
-    - https://doh.dns.sb/dns-query
-    - https://dns.cloudflare.com/dns-query
-    - https://dns.twnic.tw/dns-query
-    - tls://8.8.4.4:853
-  fallback-filter:
-    geoip: true
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
+# Clash for Android
+clash-for-android: 
+  ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
+
+# Stash
+url-rewrite:
+    - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+    - ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 proxies:
 
@@ -3625,4 +3611,3 @@ rules:
   - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
-  
