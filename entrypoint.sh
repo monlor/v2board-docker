@@ -1,8 +1,13 @@
 #!/bin/bash
 
-echo "更新v2board文件..."
-rsync -az --update /tmp/www/ /www/
-composer update
+set -eu
+
+if [ -d /tmp/www ]; then
+    echo "更新v2board文件..."
+    rsync -az --update /tmp/www/ /www/
+    composer update
+    rm -rf /tmp/www
+fi
 
 echo "生成Caddy配置文件..."
 echo -n > /run/caddy/caddy.conf
