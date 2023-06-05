@@ -3,7 +3,6 @@
 echo "更新v2board文件..."
 rsync -az --update /tmp/www/ /www/
 composer update
-php artisan v2board:update
 
 echo "生成Caddy配置文件..."
 echo -n > /run/caddy/caddy.conf
@@ -50,7 +49,8 @@ cat <<-EOF
 
 后续更新v2board：
 1. 备份docker卷数据
-2. 执行更新命令：docker exec -it v2board /bin/bash update.sh
+2. 拉取最新镜像启动服务
+2. 执行更新命令：docker exec -it v2board /usr/bin/php artisan v2board:update
 ============================================
 EOF
 
