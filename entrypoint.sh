@@ -1,12 +1,9 @@
 #!/bin/bash
 
-# 未初始化的情况下，每次启动都会更新v2board
-# 初始化后，后续更新使用命令`docker exec -it v2board /bin/bash update.sh`
-if [ ! -f /www/.env ]; then
-    echo "更新v2board文件..."
-    rm -rf /www/{*,.[^.]*}
-    cp -rf /tmp/www/{*,.[^.]*} /www
-fi
+echo "更新v2board文件..."
+rsync -az --update /tmp/www/ /www/
+composer update
+php artisan v2board:update
 
 echo "生成Caddy配置文件..."
 echo -n > /run/caddy/caddy.conf

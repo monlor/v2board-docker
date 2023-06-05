@@ -2,10 +2,11 @@ FROM monlor/v2board-lcrp
 
 ENV COMPOSER_VERSION="2.5.5"
 
-RUN curl -#Lo /usr/local/bin/composer https://getcomposer.org/download/${COMPOSER_VERSION}/composer.phar && \
+RUN apk add rsync && \
+    curl -#Lo /usr/local/bin/composer https://getcomposer.org/download/${COMPOSER_VERSION}/composer.phar && \
     chmod +x /usr/local/bin/composer
 
-ENV V2BOARD_VERSION="1.7.3"
+ENV V2BOARD_VERSION="1.7.4"
 
 RUN curl -#Lo /tmp/${V2BOARD_VERSION}.tar.gz https://github.com/v2board/v2board/archive/refs/tags/${V2BOARD_VERSION}.tar.gz && \
     mkdir -p /tmp/www && cd /tmp/www && \
