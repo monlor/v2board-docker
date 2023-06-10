@@ -215,16 +215,7 @@ table[name='blk_permission'], table[name='blk_footer'] {display:none;}
 <table cellspacing="0" cellpadding="0" border="0" width="600" name="tblText" class="tblText" style="float: left; background-color: rgb(248, 248, 248);" align="left"><tbody><tr><td valign="top" align="left" name="tblCell" class="tblCell" style="padding: 10px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left; word-break: break-word;"></td></tr></tbody>    
 </table></th></tr></tbody>    
 </table></td></tr></tbody>    
-</table></div></td></tr><tr id="section_4" class="flexible-section" data-columns="1" style=""><td width="100%" class="blk_container bmeHolder" name="bmePreFooter" valign="top" align="center" style="background-color: rgb(249, 243, 254);   " bgcolor="#f9f3fe"><div id="dv_6" class="blk_wrapper" style="">    
-<table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_text"><tbody><tr><td>    
-<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bmeContainerRow"><tbody><tr><th class="tdPart" valign="top" align="center" style="background-color: rgb(248, 248, 248);">    
-<table cellspacing="0" cellpadding="0" border="0" width="600" name="tblText" class="tblText" style="float: left; background-color: rgb(248, 248, 248);" align="left"><tbody><tr><td valign="top" align="left" name="tblCell" class="tblCell" style="padding: 10px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left; word-break: break-word;"><div>&nbsp;</div>
-<div>&nbsp;</div>
-<div>&nbsp;</div></td></tr></tbody>    
-</table></th></tr></tbody>    
-</table></td></tr></tbody>    
-  
-</table></td></tr></tbody>    
+</table></div></td></tr></tbody>    
 </table></td></tr></tbody>    
 </table>    
 </body>    
