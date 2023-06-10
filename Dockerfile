@@ -16,6 +16,8 @@ RUN curl -#Lo /tmp/${V2BOARD_VERSION}.tar.gz https://github.com/v2board/v2board/
 
 COPY rules /tmp/www/resources/rules
 
+COPY mail /tmp/www/resources/views/mail
+
 COPY entrypoint.sh /entrypoint.sh
 
 COPY crontabs.conf /etc/crontabs/root
