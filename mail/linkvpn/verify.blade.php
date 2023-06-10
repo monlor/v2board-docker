@@ -14,7 +14,7 @@
 <table class="blk" name="blk_text" width="600" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>    
 <table cellpadding="0" cellspacing="0" border="0" width="100%" class="bmeContainerRow"><tbody><tr><th valign="top" align="center" class="tdPart">    
 <table name="tblText" style="float:left;" align="left" border="0" cellpadding="0" cellspacing="0" class="tblText" width="600"><tbody><tr><td name="tblCell" style="padding: 20px; font-size: 14px; font-weight: 400; font-family: Arial, Helvetica, sans-serif; color: rgb(56, 56, 56); text-align: left; word-break: break-word;" align="left" valign="top" class="tblCell"><div style="line-height: 150%;">
-<p  style="margin-top: 0px; margin-bottom: 0px; line-height: 150%;"><span style="font-size: 24px; line-height: 150%;"><strong>尊敬的用户，</strong></span></p>
+<p  style="margin-top: 0px; margin-bottom: 0px; line-height: 150%;"><span style="font-size: 24px; line-height: 150%;"><strong>尊敬的用户</strong></span></p>
 </div></td></tr></tbody>    
 </table></th></tr></tbody>    
 </table></td></tr></tbody>    
