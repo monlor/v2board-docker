@@ -158,13 +158,13 @@ table[name='blk_permission'], table[name='blk_footer'] {display:none;}
 <div id="dv_1" class="blk_wrapper" style="">    
 <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_image"><tbody><tr><td>    
 <table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td align="left" class="bmeImage" style="border-collapse: collapse; padding: 10px 15px; background-color: rgb(49, 151, 149);"><img    
- src="https://images.benchmarkemail.com/client1478360/image14124443.png" width="85.5" alt="" data-radius="0" style="max-width: 85.5px; display: block; border-radius: 0px;" border="0" data-original-max-width="863" class="keep-custom-width" data-customwidth="15"></td></tr></tbody>    
+ src="https://file.linkvpn.org/logo/logo_white.png" width="85.5" alt="" data-radius="0" style="max-width: 85.5px; display: block; border-radius: 0px;" border="0" data-original-max-width="863" class="keep-custom-width" data-customwidth="15"></td></tr></tbody>    
 </table></td></tr></tbody>    
 </table></div></td></tr> <tr id="section_3" class="flexible-section" data-columns="1" style=""><td width="100%" class="blk_container bmeHolder bmeBody" name="bmeBody" valign="top" align="center" style="color: rgb(56, 56, 56); background-color: rgb(255, 255, 255);" bgcolor="#FFFFFF"><div id="dv_2" class="blk_wrapper" style="">    
 <table class="blk" name="blk_text" width="600" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>    
 <table cellpadding="0" cellspacing="0" border="0" width="100%" class="bmeContainerRow"><tbody><tr><th valign="top" align="center" class="tdPart">    
 <table name="tblText" style="float:left;" align="left" border="0" cellpadding="0" cellspacing="0" class="tblText" width="600"><tbody><tr><td name="tblCell" style="padding: 20px; font-size: 14px; font-weight: 400; font-family: Arial, Helvetica, sans-serif; color: rgb(56, 56, 56); text-align: left; word-break: break-word;" align="left" valign="top" class="tblCell"><div style="line-height: 150%;">
-<p  style="margin-top: 0px; margin-bottom: 0px; line-height: 150%;"><span style="font-size: 24px; line-height: 150%;"><strong>尊敬的用户，</strong></span></p>
+<p  style="margin-top: 0px; margin-bottom: 0px; line-height: 150%;"><span style="font-size: 20px; line-height: 150%;"><strong>尊敬的用户</strong></span></p>
 </div></td></tr></tbody>    
 </table></th></tr></tbody>    
 </table></td></tr></tbody>    
@@ -223,19 +223,7 @@ table[name='blk_permission'], table[name='blk_footer'] {display:none;}
 <div>&nbsp;</div></td></tr></tbody>    
 </table></th></tr></tbody>    
 </table></td></tr></tbody>    
-</table></div><div id="dv_8" class="blk_wrapper" style="">    
-<table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_footer" style="background-color: rgb(248, 248, 248);"><tbody><tr><td name="tblCell" class="tblCell" style="padding: 20px; word-break: break-word;" valign="top" align="left">    
-<table cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td name="bmeBadgeText" style="text-align:left; word-break: break-word;" align="left"><span id="spnFooterText" style="font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 11px; line-height: 140%;">    
-<br>&#19978;&#28023;&#24066;&#38738;&#28006;&#21306;&#27719;&#32852;&#36335;33&#21495;</span>    
-<br>    
-<br><span style="font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 11px; line-height: 140%;"><a  href="https://clt1478360.benchmarkurl.com/c/su?e=166665A&c=168ED8&email=WNVSJm46fw%2FJ13fU18kbq5mhHkDUHXPVCJ%2FwYbRnGP0%3D&relid="  style="color:inherit;text-decoration:underline;">Update Profile/Email Address</a>     
-<br></span></td></tr><tr><td name="bmeBadgeImage" style="text-align: center; padding-top: 20px; word-break: break-word;" align="center"><a href="https://www.benchmarkemail.com/cn?p=500289" target=""><img    
- src="https://www.benchmarkemail.com/images/cn/web4/misc/emailfooter/opt11.png"  style="max-width:116px;" border=0 /></a></td></tr></tbody>    
-</table></td></tr></tbody>    
-</table></div>
 
-</td></tr>  </tbody>    
-</table> </td></tr>  <tr id="section_5" class="flexible-section" data-columns="1" data-section-type="bmeFooter"><td width="100%" class="blk_container bmeHolder" name="bmeFooter" valign="top" align="center" style="color: rgb(102, 102, 102); background-color: rgb(52, 52, 52);" bgcolor="#343434"></td></tr> </tbody>    
 </table></td></tr></tbody>    
 </table></td></tr></tbody>    
 </table>    
