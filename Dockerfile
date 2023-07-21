@@ -18,6 +18,8 @@ COPY rules /tmp/www/resources/rules
 
 COPY mail /tmp/www/resources/views/mail
 
+COPY app /tmp/www/app
+
 COPY entrypoint.sh /entrypoint.sh
 
 COPY crontabs.conf /etc/crontabs/root
