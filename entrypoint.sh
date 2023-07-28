@@ -10,6 +10,9 @@ if [ -d /tmp/www ]; then
     if [ -f /www/config/v2board.php ]; then
         cp -rf /www/config/v2board.php /tmp/www/config
     fi
+    if [ -f /www/config/theme/v2board.php ]; then
+        cp -rf /www/config/theme/v2board.php /tmp/www/config/theme
+    fi
     rm -rf /www/{.*,*} &> /dev/null
     mv -f /tmp/www/{.*,*} /www &> /dev/null
     rm -rf /tmp/www
