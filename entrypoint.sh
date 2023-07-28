@@ -13,7 +13,7 @@ if [ -d /tmp/www ]; then
     rm -rf /www/{.*,*} &> /dev/null
     mv -f /tmp/www/{.*,*} /www &> /dev/null
     rm -rf /tmp/www
-    php artisan v2board:update
+    sleep 15 && php /www/artisan v2board:update &
 fi
 
 echo "生成Caddy配置文件..."
