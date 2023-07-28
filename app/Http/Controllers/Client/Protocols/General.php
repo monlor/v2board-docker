@@ -58,7 +58,7 @@ class General
         if ($server['obfs'] === 'http') {
             $obfs = "?plugin=obfs-local;obfs=http;obfs-host={$server['obfs_settings']['host']};obfs-uri={$server['obfs_settings']['path']}";
         }
-        return "ss://{$str}@{$server['host']}:{$server['port']}{$obfs}#{$name}\r\n";
+        return "ss://{$str}@{$server['host']}:{$server['port']}/{$obfs}#{$name}\r\n";
     }
 
     public static function buildVmess($uuid, $server)
