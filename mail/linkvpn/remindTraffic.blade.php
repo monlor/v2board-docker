@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>到期提示</title>
+    <title>流量提示</title>
     <style type="text/css">
         img {
             max-width: 100%;
@@ -18,7 +18,7 @@
         }
 
         body {
-            background-color: #329796;
+            background-color: #f6f6f6;
         }
 
         @media only screen and (max-width: 640px) {
@@ -79,11 +79,11 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/EmailMessage"
-    style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #329796; margin: 0;"
-    bgcolor="#329796">
+    style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #f6f6f6; margin: 0;"
+    bgcolor="#f6f6f6">
     <table class="body-wrap"
-        style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #329796; margin: 0;"
-        bgcolor="#329796">
+        style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #f6f6f6; margin: 0;"
+        bgcolor="#f6f6f6">
         <tr
             style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
             <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;"
@@ -100,9 +100,9 @@
                         <tr
                             style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                             <td class="alert alert-warning"
-                                style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 22px; font-weight: bold; vertical-align: top; color: #fff; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; background-color: #0073ba; margin: 0; padding: 20px;"
-                                align="center" bgcolor="#0073ba" valign="top">
-                                到期提示
+                                style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 22px; font-weight: bold; vertical-align: top; color: #fff; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; background-color: #329796; margin: 0; padding: 20px;"
+                                align="center" bgcolor="#329796" valign="top">
+                                流量提示
                             </td>
                         </tr>
                         <tr
@@ -125,7 +125,7 @@
                                         <td class="content-block"
                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 16px; color: #4a4a4a; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                             valign="top">
-                                            您的订阅套餐将于 <strong>24</strong> 小时后到期，请及时续费
+                                            您本月的套餐流量已使用 <strong>80%</strong>，请合理安排使用，避免提前耗尽
                                         </td>
                                     </tr>
                                     <tr
@@ -143,7 +143,7 @@
                                             valign="top">
                                             <a href="{{$url}}"
                                                 class="btn-primary"
-                                                style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; color: #fff; text-decoration: none; line-height: 2em; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background-color: #0073ba; margin: 0; border-color: #0073ba; border-style: solid; border-width: 8px 20px;">登录 {{$name}}</a>
+                                                style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; color: #fff; text-decoration: none; line-height: 2em; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background-color: #329796; margin: 0; border-color: #329796; border-style: solid; border-width: 8px 20px;">登录 {{$name}}</a>
                                         </td>
                                     </tr>
                                 </table>
