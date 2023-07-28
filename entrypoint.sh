@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu
+set -u
 
 if [ -d /tmp/www ]; then
     echo "更新v2board文件..."
@@ -10,8 +10,8 @@ if [ -d /tmp/www ]; then
     if [ -f /www/config/v2board.php ]; then
         cp -rf /www/config/v2board.php /tmp/www/config
     fi
-    rm -rf /www/{.*,*}
-    mv -f /tmp/www/{.*,*} /www
+    rm -rf /www/{.*,*} &> /dev/null
+    mv -f /tmp/www/{.*,*} /www &> /dev/null
     rm -rf /tmp/www
     php artisan v2board:update
 fi
