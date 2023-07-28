@@ -4,9 +4,16 @@ set -eu
 
 if [ -d /tmp/www ]; then
     echo "更新v2board文件..."
-    rsync -az --update /tmp/www/ /www/
-    composer update
+    if [ -f /www/.env ]; then
+        cp -rf /www/.env /tmp/www
+    fi
+    if [ -f /www/config/v2board.php ]; then
+        cp -rf /www/config/v2board.php /tmp/www/config
+    fi
+    rm -rf /www/{.*,*}
+    mv -f /tmp/www/{.*,*} /www
     rm -rf /tmp/www
+    php artisan v2board:update
 fi
 
 echo "生成Caddy配置文件..."
