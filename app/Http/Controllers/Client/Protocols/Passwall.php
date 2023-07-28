@@ -44,7 +44,8 @@ class Passwall
             base64_encode("{$server['cipher']}:{$password}")
         );
         if ($server['obfs'] === 'http') {
-            $obfs = "?plugin=obfs-local;obfs=http;obfs-host={$server['obfs_settings']['host']}";
+            $plugin = rawurlencode("obfs-local;obfs=http;obfs-host={$server['obfs_settings']['host']}");
+            $obfs = "?plugin={$plugin}";
         }
         return "ss://{$str}@{$server['host']}:{$server['port']}/{$obfs}#{$name}\r\n";
     }

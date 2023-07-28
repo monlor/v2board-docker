@@ -43,7 +43,8 @@ class SagerNet
             base64_encode("{$server['cipher']}:{$uuid}")
         );
         if ($server['obfs'] === 'http') {
-            $obfs = "?plugin=obfs-local;obfs=http;obfs-host={$server['obfs_settings']['host']};obfs-uri={$server['obfs_settings']['path']}";
+            $plugin = rawurlencode("obfs-local;obfs=http;obfs-host={$server['obfs_settings']['host']}");
+            $obfs = "?plugin={$plugin}";
         }
         return "ss://{$str}@{$server['host']}:{$server['port']}/{$obfs}#{$name}\r\n";
     }
