@@ -1,5 +1,21 @@
-FROM monlor/v2board-lcrp
+FROM alpine:3.11.5
 
+ARG TARGETARCH
+
+ENV CADDY_VERSION="1.0.4"
+
+RUN apk update && \
+    apk add --no-cache bash php7 curl supervisor redis \
+    php7-zlib php7-xml php7-phar php7-intl php7-dom php7-xmlreader php7-ctype php7-session \
+    php7-mbstring php7-tokenizer php7-gd php7-redis php7-bcmath \
+    php7-iconv php7-pdo php7-posix php7-gettext php7-simplexml php7-sodium php7-sysvsem \
+    php7-fpm php7-mysqli php7-json php7-openssl php7-curl php7-sockets php7-zip php7-pdo_mysql \
+    php7-xmlwriter php7-opcache php7-gmp php7-pdo_sqlite php7-sqlite3 php7-pcntl && \
+    wget https://github.com/caddyserver/caddy/releases/download/v${CADDY_VERSION}/caddy_v${CADDY_VERSION}_linux_${TARGETARCH}.tar.gz && \
+    tar -zxvf caddy_v${CADDY_VERSION}_linux_${TARGETARCH}.tar.gz caddy -C /usr/local/bin && \
+    rm -rf caddy_v${CADDY_VERSION}_linux_${TARGETARCH}.tar.gz && \
+    mkdir -p /www /wwwlogs /run/php /run/caddy /run/supervisor
+    
 ENV COMPOSER_VERSION="2.5.5"
 
 RUN apk add rsync && \
@@ -25,6 +41,8 @@ COPY entrypoint.sh /entrypoint.sh
 COPY crontabs.conf /etc/crontabs/root
 
 COPY supervisord.conf /run/supervisor/supervisord.conf
+
+COPY www.conf /etc/php7/php-fpm.d/www.conf
 
 RUN chmod +x /entrypoint.sh && \
     touch /wwwlogs/queue.log /wwwlogs/horizon.log 
