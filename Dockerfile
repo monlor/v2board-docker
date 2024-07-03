@@ -40,7 +40,8 @@ COPY entrypoint.sh /entrypoint.sh
 
 COPY crontabs.conf /etc/crontabs/root
 
-COPY supervisord.conf /run/supervisor/supervisord.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord-run.conf /run/supervisor/supervisord.conf
 
 COPY www.conf /etc/php7/php-fpm.d/www.conf
 
