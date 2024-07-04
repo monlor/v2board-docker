@@ -2,27 +2,22 @@
 
 set -u
 
-if [ -d /tmp/www ]; then
-    echo "更新v2board文件..."
-    if [ -f /www/.env ]; then
-        cp -rf /www/.env /tmp/www
-    fi
-    if [ -f /www/config/v2board.php ]; then
-        cp -rf /www/config/v2board.php /tmp/www/config
-    fi
-    if [ -f /www/config/theme/v2board.php ]; then
-        cp -rf /www/config/theme/v2board.php /tmp/www/config/theme
-    fi
-    rm -rf /www/{.*,*} &> /dev/null
-    mv -f /tmp/www/{.*,*} /www &> /dev/null
-    rm -rf /tmp/www
-    sleep 15 && php /www/artisan v2board:update &
+if [ ! -f /data/.env ]; then
+    cp -rf /www/.env.example /data/.env
 fi
+
+if [ ! -f /data/v2board.php ]; then
+    touch /data/v2board.php
+fi
+
+echo "创建v2board软链接..."
+ln -sf /data/.env /www/.env
+ln -sf /data/v2board.php /www/config/v2board.php
 
 echo "生成Caddy配置文件..."
 echo -n > /run/caddy/caddy.conf
-echo ${HOME_URL} | tr ',' '\n' | while read url; do
-    if echo ${url} | grep -Eq "^https"; then
+echo "${HOME_URL}" | tr ',' '\n' | while read url; do
+    if echo "${url}" | grep -Eq "^https"; then
         cat >> /run/caddy/caddy.conf <<-EOF
 ${url} {
     root /www/public
